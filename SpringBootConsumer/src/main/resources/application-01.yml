@@ -1,0 +1,11 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: KafkaConsumerApplication
+  kafka:
+    consumer:
+      bootstrap-servers:
+        - localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
