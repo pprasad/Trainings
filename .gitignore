@@ -1,4 +1,3 @@
-.classpath
-.project
-.settings/
-SpringBootProducer/target/classes/org/zensar/kafka/dto/AccountDto.class
+target/
+**/src/main/**/target/
+**/src/test/**/target/

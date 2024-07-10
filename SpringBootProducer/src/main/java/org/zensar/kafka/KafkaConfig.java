@@ -52,7 +52,7 @@ public class KafkaConfig {
         ProducerFactory<String, String> producerFactory = new DefaultKafkaProducerFactory<>(props);
         return  new KafkaTemplate<>(producerFactory);
     }
-
+    // ignore below methods
     /*@Bean(name = "JsonKafkaTemplate")
     public KafkaTemplate<String, AccountDto> getJsonKafkaTemplate() {
         Map<String, Object> props = new HashMap<>();
