@@ -30,12 +30,12 @@ public class AccountDto {
         this.balance = balance;
     }
 
-    @Override
+   /* @Override
     public String toString() {
         return "Account{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", balance=" + balance +
                 '}';
-    }
+    }*/
 }

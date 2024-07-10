@@ -43,6 +43,17 @@ public class KafkaConfig {
     }
 
     @Bean(name = "JsonKafkaTemplate")
+    public KafkaTemplate<String, String> getJsonKafkaTemplate() {
+        Map<String, Object> props = new HashMap<>();
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        props.put(ProducerConfig.ACKS_CONFIG, "all");
+        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.springframework.kafka.support.serializer.JsonSerializer");
+        ProducerFactory<String, String> producerFactory = new DefaultKafkaProducerFactory<>(props);
+        return  new KafkaTemplate<>(producerFactory);
+    }
+
+    /*@Bean(name = "JsonKafkaTemplate")
     public KafkaTemplate<String, AccountDto> getJsonKafkaTemplate() {
         Map<String, Object> props = new HashMap<>();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
@@ -51,6 +62,6 @@ public class KafkaConfig {
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.springframework.kafka.support.serializer.JsonSerializer");
         ProducerFactory<String, AccountDto> producerFactory = new DefaultKafkaProducerFactory<>(props);
         return  new KafkaTemplate<>(producerFactory);
-    }
+    }*/
 
 }
