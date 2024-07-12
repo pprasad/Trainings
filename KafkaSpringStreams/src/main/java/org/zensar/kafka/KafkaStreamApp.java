@@ -1,11 +1,10 @@
-package org.zensar;
-
+package org.zensar.kafka;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KafkaAPI {
+public class KafkaStreamApp {
     public static void main(String[] args) {
-        SpringApplication.run(KafkaAPI.class, args);
+        SpringApplication.run(KafkaStreamApp.class, args);
     }
 }

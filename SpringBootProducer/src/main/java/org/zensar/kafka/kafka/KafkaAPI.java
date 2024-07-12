@@ -1,4 +1,4 @@
-package org.zensar.kafka;
+package org.zensar.kafka.kafka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

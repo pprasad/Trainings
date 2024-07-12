@@ -1,4 +1,4 @@
-package org.zensar.kafka.controller;
+package org.zensar.kafka.kafka.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -6,9 +6,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.zensar.kafka.dto.MessageDto;
-import org.zensar.kafka.dto.AccountDto;
-import org.zensar.kafka.service.KafkaMessageService;
+import org.zensar.kafka.kafka.dto.MessageDto;
+import org.zensar.kafka.kafka.dto.AccountDto;
+import org.zensar.kafka.kafka.service.KafkaMessageService;
 
 @RestController
 public class KafkaMessageController {

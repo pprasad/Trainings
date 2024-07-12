@@ -1,4 +1,4 @@
-package org.zensar.kafka.dto;
+package org.zensar.kafka.kafka.dto;
 
 public class MessageDto {
      private String message;

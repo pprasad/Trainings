@@ -1,0 +1,36 @@
+server:
+  port: 8085
+spring:
+ application:
+    name: KafkaStreams
+ cloud:
+   function:
+     definition: produceMessages;processMessages;consumerMessages;supplyNumbers;processEven;processOdd;consumeEven;consumeOdd
+   stream:
+     bindings:
+       produceMessages-out-0:
+         destination: first-topic
+       processMessages-in-0:
+         destination: first-topic
+       processMessages-out-0:
+         destination: second-topic
+       consumerMessages-in-0:
+         destination: second-topic
+       supplyNumbers-out-0:
+         destination: number-topic
+       processEven-in-0:
+         destination: number-topic
+       processEven-out-0:
+         destination: even-topic
+       processEven-in-1:
+         destination: number-topic
+       processEven-out-1:
+         destination: odd-topic
+       consumeEven-out-0:
+         destination: even-topic
+       consumeEven-out-1:
+         destination: odd-topic
+     kafka:
+       binder:
+         brokers:
+           - localhost:9092

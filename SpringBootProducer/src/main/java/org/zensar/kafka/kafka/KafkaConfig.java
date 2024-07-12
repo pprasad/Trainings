@@ -1,4 +1,4 @@
-package org.zensar.kafka;
+package org.zensar.kafka.kafka;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
-import org.zensar.kafka.dto.AccountDto;
 
 
 import java.util.HashMap;

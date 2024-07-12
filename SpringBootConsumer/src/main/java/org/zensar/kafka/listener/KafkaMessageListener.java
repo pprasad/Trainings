@@ -1,8 +1,8 @@
-package org.zensar.listener;
+package org.zensar.kafka.listener;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
-import org.zensar.kafka.dto.AccountDto;
+import org.zensar.kafka.kafka.dto.AccountDto;
 
 @Component
 public class KafkaMessageListener {

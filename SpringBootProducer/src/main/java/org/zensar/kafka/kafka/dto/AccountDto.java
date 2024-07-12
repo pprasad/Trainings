@@ -1,4 +1,4 @@
-package org.zensar.kafka.dto;
+package org.zensar.kafka.kafka.dto;
 
 public class AccountDto {
 
@@ -30,7 +30,7 @@ public class AccountDto {
         this.balance = balance;
     }
 
-    @Override
+   @Override
     public String toString() {
         return "Account{" +
                 "id=" + id +
