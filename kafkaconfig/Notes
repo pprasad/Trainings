@@ -1,0 +1,8 @@
+ACLS :- 
+ Topics :- Create & Delete
+     kafka/bin/kafka-acls.sh --bootstrap-server localhost:9092 --add --operation Create --allow-principal User:tom --topic demo_03 --command-config kafka/sasl/acls.properties
+     kafka/bin/kafka-acls.sh --bootstrap-server localhost:9092 --remove --operation Delete --allow-principal User:tom --topic demo_02 --command-config kafka/sasl/acls.properties
+ Producer :- 
+     kafka/bin/kafka-acls.sh --bootstrap-server localhost:9092 --add --allow-principal User:tom --producer --topic demo_01 --command-config kafka/sasl/acls.properties
+ Consumer :- 
+     kafka/bin/kafka-acls.sh --bootstrap-server localhost:9092 --add --allow-principal User:tom --consumer --topic demo_02 --command-config kafka/sasl/acls.properties       
