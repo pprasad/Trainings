@@ -7,7 +7,7 @@ import org.zensar.kafka.kafka.dto.AccountDto;
 @Component
 public class KafkaMessageListener {
 
-    //@KafkaListener(topics = "MessageTopic", groupId = "MsgTopicTest")
+    @KafkaListener(topics = "MessageTopic", groupId = "MsgTopicTest")
     public void fetchKafkaMessages(String message) {
          System.out.println("Received Messages :{}"+ message);
     }
