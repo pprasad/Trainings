@@ -1,0 +1,18 @@
+#!/bin/bash
+
+sudo yum update -y
+sudo yum install java-17-amazon-corretto-devel.x86_64 -y
+sudo yum install wget -y
+sudo wget https://archive.apache.org/dist/kafka/3.7.0/kafka_2.13-3.7.0.tgz
+sudo tar -xzf kafka_2.13-3.7.0.tgz
+sudo rm kafka_2.13-3.7.0.tgz
+
+cat > /home/ec2-user/bootstrap-servers <<- "EOF"
+${bootstrap_server_1}
+${bootstrap_server_2}
+${bootstrap_server_3}
+EOF
+
+echo "PATH=$PATH:/bin:/usr/local/bin:/usr/bin:/kafka_2.13-3.7.0/bin" >> /home/ec2-user/.bash_profile
+
+source ~/.bash_profile
