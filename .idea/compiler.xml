@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="KafkaSpringStreams" />
         <module name="SpringBootProducer" />
         <module name="Consumer" />
         <module name="Producer" />
@@ -16,6 +17,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="KafkaSpringStreams" options="-parameters" />
       <module name="SpringBootConsumer" options="-parameters" />
       <module name="SpringBootProducer" options="-parameters" />
     </option>
