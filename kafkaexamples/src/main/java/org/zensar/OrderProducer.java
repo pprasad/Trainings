@@ -29,6 +29,7 @@ public class OrderProducer {
            BookDto bookDto = new BookDto(1, "Java Core", "Black Book");
            ProducerRecord<String, BookDto> record = new ProducerRecord<>(TOPIC_NAME, KEY, bookDto);
            producer.send(record, new MessageCallBack());
+           producer.send().
            producer.close();
     }
 
